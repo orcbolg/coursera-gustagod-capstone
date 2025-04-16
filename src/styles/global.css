@@ -1,0 +1,132 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700;800&family=Markazi+Text:wght@400;500;600&display=swap');
+
+/* === Reset básico === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  background-color: #FFFFFF;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* === Paleta de cores (style guide) === */
+:root {
+  --primary-green: #495E57;
+  --primary-yellow: #F4CE14;
+  --accent-pink: #EE9972;
+  --light-gray: #EDEFEE;
+  --dark-gray: #333333;
+
+  --text-color: var(--dark-gray);
+  --radius: 16px;
+}
+
+/* === Tipografia === */
+.display-title {
+  font-family: 'Markazi Text', serif;
+  font-size: 64pt;
+  font-weight: 500;
+  color: var(--primary-green);
+}
+
+.subtitle {
+  font-family: 'Markazi Text', serif;
+  font-size: 40pt;
+  font-weight: 400;
+  color: var(--primary-green);
+}
+
+.lead-text {
+  font-size: 18pt;
+  font-weight: 500;
+}
+
+.section-title {
+  font-size: 20pt;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.category-title {
+  font-size: 16pt;
+  font-weight: 800;
+}
+
+.card-title {
+  font-size: 18pt;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16pt;
+  max-width: 65ch;
+  line-height: 1.5;
+}
+
+/* === Botões === */
+button {
+  font-family: inherit;
+  background-color: var(--primary-green);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--accent-pink);
+}
+
+/* === Utilidades === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.rounded {
+  border-radius: var(--radius);
+}
+
+.bg-light {
+  background-color: var(--light-gray);
+}
+
+.bg-primary {
+  background-color: var(--primary-green);
+  color: white;
+}
+
+.bg-highlight {
+  background-color: var(--primary-yellow);
+  color: black;
+}
+
+/* === Responsividade === */
+@media (max-width: 768px) {
+  .display-title {
+    font-size: 48pt;
+  }
+
+  .subtitle {
+    font-size: 32pt;
+  }
+
+  .lead-text {
+    font-size: 16pt;
+  }
+}
