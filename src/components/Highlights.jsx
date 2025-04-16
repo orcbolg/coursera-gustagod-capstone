@@ -1,5 +1,6 @@
 // components/Highlights.jsx
 import React from 'react';
+import './Highlights.css'
 
 function Highlight({ title, description, image }) {
   return (
@@ -13,8 +14,8 @@ function Highlight({ title, description, image }) {
 
 function Highlights() {
   const highlightsData = [
-    { title: 'Prato do Mês', description: 'Nosso prato de destaque é... ', image: '/images/plate.jpg' },
-    { title: 'Promoção Especial', description: 'Desconto em reservas para grupos!', image: '/images/promo.jpg' },
+    { title: 'Prato do Mês', description: 'Nosso prato de destaque é... ', image: '/plate.jpg' },
+    { title: 'Promoção Especial', description: 'Desconto em reservas para grupos!', image: '/promo.png' },
   ];
 
   return (

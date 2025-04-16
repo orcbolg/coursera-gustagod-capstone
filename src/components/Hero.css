@@ -1,0 +1,86 @@
+.hero-container {
+    padding: 2rem;
+    max-height: 1200px;
+    margin: 0 auto;
+    background-color: var(--primary-green);
+  }
+  
+  .hero-title {
+    font-family: 'Markazi Text', serif;
+    font-size: 64pt;
+    font-weight: 500;
+    color: var(--primary-yellow);
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 2rem;
+    font-family: 'Karla', serif;
+    font-size: 18pt;
+  }
+  
+  .hero-text {
+    flex: 1;
+    min-width: 250px;
+    font-size: 1.25rem;
+    color: var(--light-gray);
+  }
+  
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero-image img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .hero-button {
+    background-color: var(--primary-yellow);
+    color: var(--text-dark);
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 24pt;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+
+  }
+  
+  .hero-button:hover {
+    background-color: #e0bb12; /* tom mais escuro do botão ao passar o mouse */
+  }
+  
+
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;    /* Muda de linha para coluna */
+      align-items: flex-start;   /* Texto ainda alinhado à esquerda */
+    }
+  
+    .hero-text,
+    .hero-image {
+      /* Remove as restrições de largura para que possam ocupar 100% do container */
+      flex: none;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+  
+    .hero-image {
+      margin-top: 1rem;  /* Espaço entre texto e imagem */
+    }
+  }

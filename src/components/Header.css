@@ -1,0 +1,33 @@
+/* Estilos do Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--light-gray);
+  }
+  
+  header .logo img {
+    height: 50px; /* Ajuste o tamanho da logo */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 1.5rem;
+  }
+  
+  .navitem {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  

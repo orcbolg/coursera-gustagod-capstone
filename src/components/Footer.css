@@ -1,0 +1,37 @@
+/* src/styles/global.css */
+
+/* Estilos do Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+  }
+  
+  footer nav ul li {
+    margin: 0;
+  }
+  
+  footer nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer nav ul li a:hover {
+    text-decoration: underline;
+  }
+  

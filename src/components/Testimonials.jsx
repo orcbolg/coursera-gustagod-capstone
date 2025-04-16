@@ -1,5 +1,6 @@
-// components/Testimonials.jsx
 import React from 'react';
+import './Testimonials.css'
+
 
 function Testimonial({ name, text, image }) {
   return (
@@ -13,8 +14,8 @@ function Testimonial({ name, text, image }) {
 
 function Testimonials() {
   const testimonialsData = [
-    { name: 'João', text: 'A comida é maravilhosa!', image: '/assets/joao.jpg' },
-    { name: 'Maria', text: 'Melhor restaurante da cidade!', image: '/assets/maria.jpg' },
+    { name: 'João', text: 'A comida é maravilhosa!', image: '/joao.jpg' },
+    { name: 'Maria', text: 'Melhor restaurante da cidade!', image: '/maria.jpg' },
   ];
 
   return (
