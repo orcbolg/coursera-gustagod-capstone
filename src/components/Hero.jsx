@@ -19,7 +19,7 @@ function Hero() {
         </div>
     </div>
 
-    <Link to="/reservar" className="hero-button">Book a table</Link>
+    <Link to="/reservar" className="hero-button">Reservar uma mesa</Link>
     </div>
 
   );

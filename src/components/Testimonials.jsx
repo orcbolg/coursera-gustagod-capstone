@@ -4,10 +4,12 @@ import './Testimonials.css'
 
 function Testimonial({ name, text, image }) {
   return (
-    <div className="testimonial">
+    <div className="highlight-card">
       <img src={image} alt={name} />
-      <p>"{text}"</p>
+      <div className="highlight-info">
+      <p className='highlight-description'>"{text}"</p>
       <h4>- {name}</h4>
+      </div>
     </div>
   );
 }
@@ -19,9 +21,9 @@ function Testimonials() {
   ];
 
   return (
-    <section className="testimonials">
+    <section className="highlights">
       <h2>O que nossos clientes dizem</h2>
-      <div className="testimonial-list">
+      <div className="highlight-list">
         {testimonialsData.map((testimonial, index) => (
           <Testimonial
             key={index}
