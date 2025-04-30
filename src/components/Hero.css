@@ -36,6 +36,11 @@
     flex: 1;
     display: flex;
     justify-content: center;
+    transition: transform 0.2s ease;
+  }
+
+  .hero-image:hover {
+    transform: translateY(-4px);
   }
   
   .hero-image img {
