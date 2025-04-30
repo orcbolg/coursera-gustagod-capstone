@@ -1,4 +1,3 @@
-// components/Highlights.jsx
 import React from 'react';
 import './Highlights.css'
 

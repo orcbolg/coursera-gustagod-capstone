@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css'
 import '../styles/global.css'
-import { Link } from 'react-router-dom'; // Importando o Link do React Router para navegar pelas páginas
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (

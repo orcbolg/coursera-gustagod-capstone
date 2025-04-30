@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
-import { fetchAPI, submitAPI } from '../api'; // Importando as funções da API
+import { fetchAPI, submitAPI } from '../api';
 
 const ReservationForm = ({ submitForm }) => {
   const { reservationData, setReservation } = useAppContext();
@@ -24,11 +24,11 @@ const ReservationForm = ({ submitForm }) => {
 
   const handleSubmit = async (values) => {
     console.log('Submitting form with values:', values);
-    const response = await submitAPI(values); // Submete a reserva
+    const response = await submitAPI(values);
 
     if (response) {
-      setReservation(values); // Adiciona a reserva ao contexto
-      navigate('/confirmed'); // Navega para a página de confirmação
+      setReservation(values);
+      navigate('/confirmed');
     } else {
       alert('Erro ao enviar a reserva');
     }
@@ -39,23 +39,22 @@ const ReservationForm = ({ submitForm }) => {
       console.error('Data inválida:', date);
       return [];
     }
-    const times = fetchAPI(date); // Chama a função fetchAPI para obter os horários disponíveis
-    setAvailableTimes(times); // Atualiza o estado com os horários disponíveis
+    const times = fetchAPI(date);
+    setAvailableTimes(times);
   };
   
 
   const updateTimes = (date, setFieldValue) => {
-    setFieldValue('date', date); // Atualiza a data no estado do Formik
+    setFieldValue('date', date);
     if (date) {
-      // Converte a string da data em um objeto Date
       const dateObj = new Date(date);
-      fetchAvailableTimes(dateObj); // Passa o objeto Date para a função fetchAvailableTimes
+      fetchAvailableTimes(dateObj);
     }
   };
 
   useEffect(() => {
-    const today = new Date(); // Pega a data de hoje como um objeto Date
-    fetchAvailableTimes(today); // Passa o objeto Date para a função fetchAvailableTimes
+    const today = new Date();
+    fetchAvailableTimes(today);
   }, []);
 
   return (
@@ -67,11 +66,10 @@ const ReservationForm = ({ submitForm }) => {
         occasion: reservationData?.occasion || '',
       }}
       validationSchema={validationSchema}
-      onSubmit={handleSubmit} // Passando o handleSubmit para o Formik
+      onSubmit={handleSubmit}
     >
       {({ setFieldValue }) => (
         <Form className="reservation-form">
-          {/* Campo Data */}
           <div>
             <label htmlFor="date">Data:</label>
             <Field
@@ -82,8 +80,6 @@ const ReservationForm = ({ submitForm }) => {
             />
             <ErrorMessage name="date" component="div" className="error" />
           </div>
-
-          {/* Campo Horário */}
           <div>
             <label htmlFor="time">Horário:</label>
             <Field id="time" name="time" as="select">
@@ -96,15 +92,11 @@ const ReservationForm = ({ submitForm }) => {
             </Field>
             <ErrorMessage name="time" component="div" className="error" />
           </div>
-
-          {/* Campo Pessoas */}
           <div>
             <label htmlFor="guests">Pessoas:</label>
             <Field id="guests" name="guests" type="number" min="1" max="10" />
             <ErrorMessage name="guests" component="div" className="error" />
           </div>
-
-          {/* Campo Ocasião */}
           <div>
             <label htmlFor="occasion">Ocasião:</label>
             <Field id="occasion" name="occasion" as="select">
@@ -115,8 +107,6 @@ const ReservationForm = ({ submitForm }) => {
             </Field>
             <ErrorMessage name="occasion" component="div" className="error" />
           </div>
-
-          {/* Botão para submeter o formulário */}
           <button type="submit">Reservar</button>
         </Form>
       )}

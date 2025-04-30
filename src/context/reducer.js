@@ -1,11 +1,10 @@
-// context/reducer.js
 export const initialState = {
     date: '',
     time: '',
     guests: 1,
     occasion: '',
   };
-  
+
   export function reducer(state, action) {
     switch (action.type) {
       case 'SET_DATE':
@@ -20,4 +19,3 @@ export const initialState = {
         return state;
     }
   }
-  
