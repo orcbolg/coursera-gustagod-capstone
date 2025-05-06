@@ -23,7 +23,6 @@ const ReservationForm = ({ submitForm }) => {
   });
 
   const handleSubmit = async (values) => {
-    console.log('Submitting form with values:', values);
     const response = await submitAPI(values);
 
     if (response) {
@@ -76,7 +75,7 @@ const ReservationForm = ({ submitForm }) => {
               id="date"
               name="date"
               type="date"
-              onChange={(e) => updateTimes(e.target.value, setFieldValue)} // Atualiza a data no Formik e os horários
+              onChange={(e) => updateTimes(e.target.value, setFieldValue)}
             />
             <ErrorMessage name="date" component="div" className="error" />
           </div>

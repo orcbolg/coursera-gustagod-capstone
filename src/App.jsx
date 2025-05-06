@@ -1,4 +1,3 @@
-// src/App.jsx
 import { BrowserRouter } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
 import AppRouter from './router/AppRouter';
