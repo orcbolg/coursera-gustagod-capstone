@@ -1,11 +1,11 @@
   .reservation-form {
-    background-color: #f9f9f3;
+    background-color: var(--light-gray);
     padding: 2rem;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     margin: 0 auto;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Markazi Text', serif;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -13,6 +13,7 @@
   
   .reservation-form label {
     font-weight: bold;
+    font-size: 18pt;
     margin-bottom: 0.5rem;
     display: block;
     color: #333;
@@ -30,28 +31,31 @@
   
   .reservation-form input:focus,
   .reservation-form select:focus {
-    border-color: #4caf50;
+    border-color: var(--primary-green);
     outline: none;
   }
   
   .reservation-form button {
-    background-color: #4caf50;
-    color: white;
-    padding: 0.8rem 1.2rem;
-    font-size: 1rem;
+    background-color: var(--primary-yellow);
+    color: var(--text-dark);
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
     border: none;
-    border-radius: 12px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 18pt;
     transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
   }
   
   .reservation-form button:hover {
-    background-color: #43a047;
+    background-color: #e0bb12;
   }
   
   .error {
     color: #d32f2f;
-    font-size: 0.85rem;
+    font-size: 1rem;
     margin-top: 0.25rem;
   }
   

@@ -5,14 +5,13 @@ const ConfirmedBooking = () => {
   const { reservations } = useAppContext();
 
   return (
-    <div>
-      <h1>Reserva Confirmada</h1>
-      <p>Sua reserva foi realizada com sucesso!</p>
-
-      <h2>Reservas:</h2>
+    <div className="hero-container">
+      <h1 className="hero-title">Reserva Confirmada!</h1>
+      <p className="hero-text">Sua reserva foi realizada com sucesso!</p>
+      <h2 className="hero-title">Reservas:</h2>
       <ul>
         {reservations.map((reservation, index) => (
-          <li key={index}>
+          <li className="hero-text" key={index}>
             <strong>Data:</strong> {reservation.date} |
             <strong> Horário:</strong> {reservation.time} |
             <strong> Pessoas:</strong> {reservation.guests} |
